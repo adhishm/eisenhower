@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fb">
+  <title>Eisenhower — Focus on what matters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✓</span><span>Eisenhower</span></div>
+      <div class="header-actions"><span class="saved"><span class="saved-dot"></span> Saved automatically</span><button class="avatar">AM</button></div>
+    </header>
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="sidebar-head"><div><p class="eyebrow">My workspace</p><h2>Tasks</h2></div><button class="icon-button" id="add-task" aria-label="Add task">＋</button></div>
+        <div class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search tasks..." aria-label="Search tasks"></div>
+        <nav class="filters" id="filters"></nav>
+        <div class="sidebar-footer"><div class="tip-icon">✦</div><div><strong>Clear your mind</strong><p>Get tasks out of your head and into the matrix.</p></div></div>
+      </aside>
+      <main class="main-content">
+        <div class="content-heading"><div><p class="eyebrow">Monday, September 21</p><h1>Good morning, <em>Adhish.</em></h1><p class="intro">Focus on what matters most today.</p></div><button class="primary-button" id="add-task-main">＋ Add task</button></div>
+        <div class="matrix-grid" id="matrix"></div>
+        <section class="unassigned" id="inbox" data-quadrant="inbox"><div class="unassigned-title"><span class="inbox-symbol">⌑</span><h3>Inbox</h3><span class="task-count" id="inbox-count">0</span><span class="drop-hint">Drag tasks here to remove from matrix</span></div><div class="inbox-tasks" id="inbox-tasks"></div></section>
+      </main>
+    </div>
+  </div>
+  <div class="modal-backdrop hidden" id="modal-backdrop"><form class="modal" id="task-form"><div class="modal-header"><div><p class="eyebrow" id="modal-eyebrow">New task</p><h2 id="modal-title">What needs doing?</h2></div><button type="button" class="close-button" id="close-modal">×</button></div><label for="task-name">Task name<input id="task-name" required placeholder="e.g. Prepare presentation"></label><div class="modal-actions"><button type="button" class="secondary-button" id="cancel-modal">Cancel</button><button class="primary-button" id="save-task">Add task</button></div></form></div>
+  <script src="app.js"></script>
+</body>
+</html>
